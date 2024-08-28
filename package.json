@@ -1,0 +1,14 @@
+{
+  "name": "challenge-coodesh",
+  "version": "1.0.0",
+  "description": "Este é um desafio para que possamos ver as suas habilidades como QA/Tester.",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^22.5.1"
+  }
+}
