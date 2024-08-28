@@ -9,6 +9,8 @@ export class HomePage {
             sigInLink: Locator,
             createAccountLink: Locator    
         },
+        search: Locator,
+        searchButton: Locator,
         menuItem: {
             whatsNew: Locator,
             women: Locator,
@@ -41,6 +43,8 @@ export class HomePage {
                 sigInLink: page.getByRole('link', { name: 'Sign In' }),
                 createAccountLink: page.getByRole('link', { name: 'Create an Account' })
             },
+            search: page.locator('#search'),
+            searchButton: page.getByRole('button', { name: 'Search' }),
             menuItem: {
                 whatsNew: page.getByRole('menuitem', { name: 'What\'s New' }),
                 women: page.getByRole('menuitem', { name: ' Women' }),
@@ -71,6 +75,7 @@ export class HomePage {
 
     async assertElements(){
         await expect(this.elements.logo).toBeVisible();
+        await expect(this.elements.search).toBeVisible();
         await expect(this.elements.topMenu.createAccountLink).toBeVisible();
         await expect(this.elements.topMenu.sigInLink).toBeVisible();
         await expect(this.elements.topMenu.supportProjectLink).toBeVisible();

@@ -1,0 +1,6 @@
+Cenário 2: Busca na Home do Site
+DADO QUE digito a url principal no endereço do navegador
+E clico Enter
+E no campo de busca digito shirt
+QUANDO clico Enter
+ENTÃO deve ser direcionado para a tela Home
