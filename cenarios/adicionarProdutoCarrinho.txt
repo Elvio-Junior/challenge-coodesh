@@ -1,0 +1,10 @@
+Cenário 3: Adicionar Produto Carrinho
+DADO QUE digito a url principal no endereço do navegador
+E clico Enter
+E clico em uma categoria no menuItem
+E ser direcionado para pagina de produtos da categoria
+E ciclo em um produto qualquer
+E ser direcionado para o detalhes de produto
+E selecionar o tamanho e cor
+QUANDO clicar em Add to Cart
+ENTÃO o carrinho deve ser atualizado

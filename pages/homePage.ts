@@ -11,6 +11,7 @@ export class HomePage {
         },
         search: Locator,
         searchButton: Locator,
+        cart: Locator,
         menuItem: {
             whatsNew: Locator,
             women: Locator,
@@ -45,6 +46,7 @@ export class HomePage {
             },
             search: page.locator('#search'),
             searchButton: page.getByRole('button', { name: 'Search' }),
+            cart: page.getByRole('link', { name: ' My Cart 1 1 items' }),
             menuItem: {
                 whatsNew: page.getByRole('menuitem', { name: 'What\'s New' }),
                 women: page.getByRole('menuitem', { name: ' Women' }),
