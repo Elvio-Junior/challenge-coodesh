@@ -1,6 +1,6 @@
 import { type Locator, type Page, expect } from '@playwright/test';
 
-export class ProductDetailPage {
+export class ProductDetailsPage {
     readonly page: Page;
     readonly elements: {
         size: Locator,
