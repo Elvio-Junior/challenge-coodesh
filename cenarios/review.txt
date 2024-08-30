@@ -1,0 +1,15 @@
+Cenário 4: Realizar checkout
+DADO QUE digito a url principal no endereço do navegador
+E clico Enter
+E crio uma conta de usuario
+E clico em uma categoria no menuItem
+E ser direcionado para pagina de produtos da categoria
+E ciclo em um produto qualquer
+E ser direcionado para o detalhes de produto
+E selecionar a tab Review
+E clicar na seleção de estrelas
+E digtar o nome
+E digitar o titulo
+E e digitar o review
+QUANDO clico em Submit Review
+ENTÃO deve ser exibido a mensagem de review realizado na pagina
