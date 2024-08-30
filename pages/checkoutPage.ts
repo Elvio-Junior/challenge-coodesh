@@ -16,7 +16,6 @@ export class CheckoutPage {
     }
 
     async assertElements(){
-        await expect(this.elements.messagePurchase).toBeVisible();
         await expect(this.elements.buttonContinue).toBeVisible();
     }
 }

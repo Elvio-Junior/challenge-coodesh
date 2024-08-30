@@ -15,7 +15,7 @@ test.describe("Suite Test Adicionar Produto Carrinho", async () => {
     homePage.goTo();
   });
 
-  test("Cenário 4: Adicionar Produto Carrinho", async ({ page }) => {
+  test("Cenário 3: Adicionar Produto Carrinho", async () => {
     await homePage.elements.menuItem.women.click();
 
     await catalogProductPage.assertElements();
