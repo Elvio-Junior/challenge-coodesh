@@ -6,6 +6,7 @@ export class ProductDetailsPage {
         size: Locator,
         color: Locator,
         addToCard: Locator
+        tabReview: Locator;
     };
 
     constructor(page: Page) {
@@ -13,7 +14,8 @@ export class ProductDetailsPage {
         this.elements = {
             size: page.getByLabel('XS'),
             color: page.getByLabel('Blue'),
-            addToCard: page.getByRole('button', { name: 'Add to Cart' })
+            addToCard: page.getByRole('button', { name: 'Add to Cart' }),
+            tabReview: page.locator('#tab-label-reviews-title')
         };
 
     }
