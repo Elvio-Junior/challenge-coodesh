@@ -1,17 +1,17 @@
 import { test, expect } from "@playwright/test";
 import { HomePage } from "../pages/homePage";
 import { CatalogProductPage } from "../pages/catalogProductPage";
-import { ProductDetailPage } from "../pages/productDetails";
+import { ProductDetailsPage } from "../pages/productDetailsPage";
 
 test.describe("Suite Test Adicionar Produto Carrinho", async () => {
   let homePage: HomePage;
   let catalogProductPage: CatalogProductPage;
-  let productDetailPage: ProductDetailPage;
+  let productDetailsPage: ProductDetailsPage;
 
   test.beforeEach(async ({ page }) => {
     homePage = new HomePage(page);
     catalogProductPage = new CatalogProductPage(page);
-    productDetailPage = new ProductDetailPage(page);
+    productDetailsPage = new ProductDetailsPage(page);
     homePage.goTo();
   });
 
@@ -21,9 +21,9 @@ test.describe("Suite Test Adicionar Produto Carrinho", async () => {
     await catalogProductPage.assertElements();
 
     await catalogProductPage.elements.product.first().click();
-    await productDetailPage.elements.size.click();
-    await productDetailPage.elements.color.click();
-    await productDetailPage.elements.addToCard.click();
+    await productDetailsPage.elements.size.click();
+    await productDetailsPage.elements.color.click();
+    await productDetailsPage.elements.addToCard.click();
 
     await expect(homePage.elements.cart).toBeVisible;
   });
