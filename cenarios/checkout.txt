@@ -4,6 +4,26 @@ E clico Enter
 E crio uma conta de usuario
 E clico em uma categoria no menuItem
 E ser direcionado para pagina de produtos da categoria
+E ciclo em um produto
+E ser direcionado para o detalhes de produto
+E selecionar o tamanho e cor
+E clicar em Add to Cart
+E o carrinho deve ser atualizado
+E ciclo no carrinho
+E ser direcionado para a tela de Shipping
+E digitar os dados de endereço e entrega
+E clicar em Next
+E ser direcionado para a tela de Review Payment
+QUANDO clico em Place Order
+ENTÃO deve ser direcionado para a tela de checkout
+E compra realizada com sucesso
+
+Cenário 7: Realizar checkout
+DADO QUE digito a url principal no endereço do navegador
+E clico Enter
+E crio uma conta de usuario
+E clico em uma categoria no menuItem
+E ser direcionado para pagina de produtos da categoria
 E ciclo em um produto qualquer
 E ser direcionado para o detalhes de produto
 E selecionar o tamanho e cor

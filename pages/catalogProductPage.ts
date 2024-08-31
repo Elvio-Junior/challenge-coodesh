@@ -16,7 +16,7 @@ export class CatalogProductPage {
             promoBlocksPrincipal: page.locator('.blocks-promo'),
             promoBlocksColumnsSecond: page.locator('.block-promo-wrapper.block-promo-2columns'),
             promoBlocksColumnsThird: page.locator('.block-promo-wrapper.block-promo-3columns'),
-            productsGrid: page.locator('.products-grid.grid'),
+            productsGrid: page.locator('.product-items.widget-product-grid'),
             product: page.getByRole('link', { name: 'Radiant Tee' })
         };
 
