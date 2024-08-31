@@ -1,4 +1,4 @@
-Cenário 4: Realizar checkout
+Cenário 5: Realizar Review do Produto
 DADO QUE digito a url principal no endereço do navegador
 E clico Enter
 E crio uma conta de usuario
