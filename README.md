@@ -1,65 +1,91 @@
-# Q.A Challenge Luma Store
-
-Este é um desafio para que possamos ver as suas habilidades como QA/Tester.
-
-Nesse desafio você deverá testar de forma automatizada o site Luma Store. O projeto a ser desenvolvido por você tem como objetivo exibir executar ações na loja conforme indicado nos casos de uso que estão logo abaixo.
-
-[SPOILER] As instruções de entrega e apresentação do challenge estão no final deste Readme (=
-
-### Antes de começar
+# Objetivo
  
-- Considere como prazo limite da avaliação o período a partir do início do teste. Se, por algum motivo, não for possível concluir dentro deste prazo, avise a pessoa que o convidou para receber instruções sobre o que fazer.
-- Documente todo o processo de investigação para o desenvolvimento da atividade (README.md no seu repositório); os resultados destas tarefas são tão importantes quanto o seu processo de pensamento e decisões à medida que as completa, por isso, tente documentar e apresentar as suas hipóteses e decisões na medida do possível.
+Este projeto tem o objetivo realizar a automação front-end utilizando o framework Playwright do site playwright.config.ts. Contempla os seguintes cenarios
+- Cenário 1: Acessar a Home do Site
+- Cenário 2: Busca na Home do Site
+- Cenário 3: Adicionar Produto Carrinho
+- Cenário 4: Realizar checkout
+- Cenário 5: Realizar Review do Produto
 
+# Pré-requisitos
 
-#### Tecnologias:
-- Ferramenta: Ghost Inspector, Selenium, Cypress, Robot Framework, ou outro de seu conhecimento
-- Adicionais: Cucumber ou outros plugins necessários para configurar a ferramenta
+## Sistemas Operacionais
 
-## Teste
+- MacOS
+    - MacOS 12 Monterey
+    - MacOS 13 Ventura
+    - MacOS 14 Sonoma
+- Linux 
+    - Debian 11
+    - Debian 12
+    - Ubuntu 20.04 (arquitetura x86-64 ou arm64)
+    - Ubuntu 22.04 (arquitetura x86-64 ou arm64)
+- Windows
+    - Windows 10+
+    - Windows Server 2016+
+    - Subsistema do Windows para Linux (WSL)
 
-Neste desafio aplicaremos os conceitos de teste caixa preta, onde testaremos a página https://magento.softwaretestingboard.com
+## NodeJs
+    - Node.js 18 e superiores
+    - Gerenciador de Pacotes do NodeJS (npm)
 
-> Nota: utilize dados fictícios criados através do site https://randomuser.me
+# Escolha do Framework Playwright
 
-**Obrigatório 1** - Para realizar o teste precisamos escolher a ferramenta de teste. Explicar o por quê da escolha, as vantagens e desvantagens dos que não foram escolhidos.
+Para o projeto foi escolhido o framework Playwright pelos seguintes motivos
 
-**Obrigatório 2** - Você deverá atender aos seguintes casos de uso:
+- Suporte Multi-Navegador: Suporte nativo para Chromium, Firefox, WebKit, e Edge, permitindo testes cross-browser.
 
-- Se a página está carregando corretamente a home page;
-- Buscar por `shirt` no menu superior e revisar se a página de resultados carregou corretamente. Veja o diferencial 1 para incrementar este caso de uso;
-- Adicionar um produto no carrinho
-- Realizar checkout
+- Múltiplas Plataformas: Funciona em Windows, macOS, Linux e suporta emulação de dispositivos móveis.
 
-### Diferenciais
-Além do que foi solicitado, existem itens adicionais para incrementar o projeto final. Você também pode adicionar algum recurso não citado anteriormente.
+- Execução em Paralelo: Capacidade nativa de executar testes em paralelo, acelerando o tempo total de execução.
 
-- **Diferencial 1** - Buscar por `shirt` no menu superior e clicar no último resultado sugerido. Se possível, escute o retorno da requisição para saber o momento de clicar na interface;
-- **Diferencial 2** - Criar uma conta na tela de Login/Cadastro. Observe que existe um captcha no formulário, então é necessário decidir como abordar este campo;
-- **Diferencial 3** - Adicionar um produto **aleatório** do catalogo de moda masculina no carrinho;
-- **Diferencial 4** - Adicionar comentário em um produto **aleatório** do catálogo de moda masculina no carrinho;
-- **Diferencial 5** - Gerar um relatório automático do teste.
+- API Poderosa: Controle detalhado sobre todas as funcionalidades do navegador, como manipulação de abas, pop-ups e iframes.
 
-## Readme do Repositório
+- Modo Headless e CI/CD: Suporte robusto para execução em modo headless e fácil integração com pipelines CI/CD.
 
-- Deve conter o título do projeto
-- Uma descrição sobre o projeto em frase
-- Deve conter uma lista com linguagem, framework e/ou tecnologias usadas
-- Como instalar e usar o projeto (instruções)
-- Não esqueça o [.gitignore](https://www.toptal.com/developers/gitignore)
-- Se está usando github pessoal, referencie que é um challenge by coodesh:  
+- Automação de Interações Complexas: Suporta interações avançadas e navegação em páginas que utilizam WebSockets, se destacando em ambientes dinâmicos.
 
->  This is a challenge by [Coodesh](https://coodesh.com/)
+Porém nem tudo é vantagem
 
-## Finalização e Instruções para a Apresentação
+- Curva de Aprendizado: A API, apesar de poderosa, pode ser complexa para iniciantes.
 
-1. Adicione o link do repositório com a sua solução no teste
-2. Verifique se o Readme está bom e faça o commit final em seu repositório;
-3. Envie e aguarde as instruções para seguir. Sucesso e boa sorte. =)
+- Comunidade em Crescimento: Menor comunidade em comparação com o Cypress, mas está crescendo rapidamente.
 
-## Suporte
+- Menos Ferramentas Integradas: Embora tenha boas integrações, pode não ter tantas ferramentas de complementação quanto o Cypress.
 
-Use a [nossa comunidade](https://discord.gg/rdXbEvjsWu) para tirar dúvidas sobre o processo ou envie uma mensagem diretamente a um especialista no chat da plataforma. 
+# Projeto
 
+## Instalação
+    - Realizar o clone do projeto
+    - Instalar os recursos necessários digite na raiz do projeto os comandos:
 
-Use a [nossa comunidade](https://discord.gg/rdXbEvjsWu) para tirar dúvidas sobre o processo ou envie uma mensagem diretamente a um especialista no chat da plataforma. 
+      - npx playwright install
+      - npm install
+
+## Execução dos Testes
+
+Existe algumas maneiras de executar os testes, sendo:
+
+    - Executar todos os testes: `npm run test:all`
+    - Executar testes via interface gráfica: `npm run test:ui`
+    - Exibir relatórios dos testes: `npm run test:report`
+
+# Referências
+- https://nodejs.org/pt-br/
+- https://playwright.dev/
+- https://developer.chrome.com/docs/puppeteer/
+
+# Ferramentas para o Desenvolvimento
+
+    As seguintes ferramentas são necessárias e/ou sugeridas para o projeto
+
+## Instalação:
+- [Git](https://git-scm.com/downloads)
+- [Node.js](https://nodejs.org/pt-br)
+
+## IDE
+- [VSCode](https://code.visualstudio.com/download)
+
+## Challenge by Coodesh
+
+Este projeto é parte de um desafio proposto pela Coodesh. [Veja mais detalhes aqui.](https://coodesh.com/pt/assessments/project/d53db0dc-ef62-4a38-98d7-53de1931f9d1/intro)

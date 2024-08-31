@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Este é um desafio para que possamos ver as suas habilidades como QA/Tester.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:all": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
